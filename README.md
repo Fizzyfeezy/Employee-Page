@@ -7,18 +7,18 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-##Setup Project
+## Setup Project
 
 1. Clone GitHub repo for this project locally
 
-Note: Make sure you have git installed locally on your computer first.
+	Note: Make sure you have git installed locally on your computer first.
 
-Find a location on your computer where you want to store the project. In my case I like all my projects to be a folder called laravel/, so that is where I run the following command, which will pull the project from github and create a copy of it on my local computer at the sites directory inside another folder called “projectName”. You can change the name of this folder it creates, by changing the last part of the code snippet below to match the name you want your folder to be called.
+	Find a location on your computer where you want to store the project. In my case I like all my projects to be a folder called laravel/, so that is where I run the following command, which will pull the project from github and create a copy of it on my local computer at the sites directory inside another folder called “projectName”. You can change the name of this folder it creates, by changing the last part of the code snippet below to match the name you want your folder to be called.
 
-(git clone linktogithubrepo.com/ projectName)
+	(git clone linktogithubrepo.com/ projectName)
 
 2. cd into your project
-You will need to be inside that project file to enter all of the rest of the commands.
+	You will need to be inside that project file to enter all of the rest of the commands.
 
 3. [Optional]: Checkout the “Start” tag so you have a fresh install of the project (and not the final files)
 
@@ -48,7 +48,7 @@ You will need to be inside that project file to enter all of the rest of the com
 	(php artisan db:seed)
 
 
-##Wrapping Up
+## Wrapping Up
 
 you can then run serve the project by running
 
@@ -61,14 +61,14 @@ after installing and configuring valet on your MacBook, you can then run you the
 (project_folder_name.test)
 
 
-##Project
+## Project
 
 If the web is up, You can then do the following
 
-- Create an employee page
-- Edit an employee page
-- Delete an employee functionality
-- List all employees page
+	- Create an employee page
+	- Edit an employee page
+	- Delete an employee functionality
+	- List all employees page
 
 
 
