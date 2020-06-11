@@ -7,6 +7,71 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+##Setup Project
+
+1. Clone GitHub repo for this project locally
+
+Note: Make sure you have git installed locally on your computer first.
+
+Find a location on your computer where you want to store the project. In my case I like all my projects to be a folder called laravel/, so that is where I run the following command, which will pull the project from github and create a copy of it on my local computer at the sites directory inside another folder called “projectName”. You can change the name of this folder it creates, by changing the last part of the code snippet below to match the name you want your folder to be called.
+
+(git clone linktogithubrepo.com/ projectName)
+
+2. cd into your project
+You will need to be inside that project file to enter all of the rest of the commands.
+
+3. [Optional]: Checkout the “Start” tag so you have a fresh install of the project (and not the final files)
+
+4. Install Composer Dependencies
+	(composer install)
+
+5. Install NPM Dependencies
+
+6. Create a copy of your .env file
+	
+	.env files are not generally committed to source control for security reasons. But there is a .env.example which is a template of the .env file that the project expects us to have. So we will make a copy of the .env.example file and create a .env file that we can start to fill out to do things like database configuration in the next few steps.
+
+7. Generate an app encryption key
+
+	(php artisan key:generate)
+
+8. Create an empty database for our application
+
+9. In the .env file, add database information to allow Laravel to connect to the database
+
+10. Migrate the database
+
+	(php artisan migrate)
+
+11. [Optional]: Seed the database
+
+	(php artisan db:seed)
+
+
+##Wrapping Up
+
+you can then run serve the project by running
+
+(php artisan serve)
+
+For Mac user, you can install Valet (just check the laravel documentation of how Valet can be run)
+
+after installing and configuring valet on your MacBook, you can then run you the name of the project which "employee.test".
+
+(project_folder_name.test)
+
+
+##Project
+
+If the web is up, You can then do the following
+
+- Create an employee page
+- Edit an employee page
+- Delete an employee functionality
+- List all employees page
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
