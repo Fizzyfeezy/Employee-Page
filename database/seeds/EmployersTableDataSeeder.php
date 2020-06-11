@@ -44,6 +44,6 @@ class EmployersTableDataSeeder extends Seeder
         ]);
 
 
-        factory(App\Employer::class, 3)->create();
+        //factory(App\Employer::class, 3)->create();
     }
 }
