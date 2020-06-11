@@ -1,0 +1,158 @@
+body .bg img{
+	position: absolute;
+	margin-left: 3%;
+	margin-top: 10%;
+}
+
+.internia {
+	margin-top: 12%;
+}
+.nav-frame ul > li {
+	padding-left: 30px;
+	font-size: 16px;
+}
+
+.nav-frame ul {
+	padding-left: 60px;
+}
+
+.font_icons i {
+	padding-left: 30px;
+    text-shadow: 1px 1px 1px #ccc;
+}
+
+.avatar {
+    vertical-align: middle;
+    width:  30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-frame a {
+	padding-left: 30px;
+}
+
+.employ{
+	width: 100%;
+    word-wrap: break-word;
+    padding-left: 30px;
+}
+
+.employ .page {
+	font-size: 24px;
+	font-weight: bold;	
+}
+
+.employ h5{
+	font-size: 12px;
+}
+
+.employ h5 span{
+	color: #FF74A2;
+}
+
+.employ h5 i {
+  margin-left: 10px;
+}
+
+tbody tr td .manage i {
+  padding-left: 10px;
+  text-shadow: 1px 1px 1px #ccc;
+  color: #B5BBC2;
+}
+
+tbody tr td .manage i:hover {
+  color: #D26061;
+}
+
+tbody tr td p {
+  color: #B5BBC2;
+  font-size: 12px;
+}
+
+.vl {
+  border-left: 2px solid;
+  height: 30px;
+  left: 50%;
+  top: 0;
+  margin-left: 10px;
+}
+
+.emp-name h1{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.emp-name{
+	margin-bottom: 20px;
+}
+
+.emp-active{
+	background: #F1F4F5;
+	border-radius: 6px;
+	height: 60px;
+	margin: 20px;
+}
+
+.emp-list img {
+	float: left;
+}
+
+.emp-list p {
+	padding-left: 50px;
+	font-size: 18px;
+	color: #404040;
+}
+
+.emp-list a{
+	text-decoration: none;
+}
+
+.side-emp h3{
+	font-size: 14px;
+	color: #D7D6E0;
+	padding-left: 22px;
+}
+
+tbody tr {
+	background: white;
+}
+
+
+footer{
+	margin-top: 17%;
+    background-color: #FF898C;
+    padding-top:17px;
+    padding-bottom:17px;
+}
+.footer-icons a{
+    margin-right:10px;
+}
+
+.footer-text p{
+    margin-bottom:0px;
+    color: #FFFFFF;
+    font-family: 'Fira Sans', sans-serif;
+    font-size:14px;
+    padding-top:10px;
+}
+
+.mobile-footer-content{
+    display:none !important;
+}
+
+
+@media(max-width:768px){
+	.employ{
+		display: none;
+	}
+
+	.mobile-footer-content{
+        display:block !important;
+    }
+
+    .footer-content{
+        display:none !important;
+    }
+}
