@@ -29,4 +29,42 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+
+    data : {
+        user : '',
+    },
+
+    methods: {
+
+        addMessage(message) {
+            
+            axios.post('/employee/nav', message).then(response => {
+                console.log(response);
+                //this.message = '';
+                this.user.push(response);
+                setTimeout(this.scrollToEnd,100);
+              //console.log(response.data);
+            }).catch(error => {
+                console.log(error);
+            });
+
+                
+
+            axios.get('/employee/all').then((response) => {
+                console.log(response);
+                this.results = response.data;
+            }).catch( error => { console.log(error); });
+
+            message = '';
+        },
+
+        scrollToEnd(){
+            window.scrollTo(0,99999);
+        },
+    },
+
+    created() {
+
+    }
+
 });

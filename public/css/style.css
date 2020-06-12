@@ -56,6 +56,11 @@ body .bg img{
   margin-left: 10px;
 }
 
+table thead {
+  background: #F6F5F8;
+  font-size: 12px;
+}
+
 tbody tr td .manage i {
   padding-left: 10px;
   text-shadow: 1px 1px 1px #ccc;
@@ -70,6 +75,40 @@ tbody tr td p {
   color: #B5BBC2;
   font-size: 12px;
 }
+
+tbody tr td img {
+  position: relative;
+}
+
+table tbody {
+  background-color: #FFFFFF;
+  border-top: 50px solid white;
+}
+
+/*table {
+  border-collapse: collapse;
+}*/
+
+/*table tbody tr{
+  border-radius: 10px;
+  border-collapse:separate; 
+  border-spacing:0 20px;
+}*/
+
+/*.table-bordered > tbody > tr > td{
+  border: 1px solid #dddddd;
+  border-right-width:0px;
+  border-left-width:0px;
+  border-radius: 10px;
+}*/
+
+td {
+    border:1px solid #dddddd;
+    border-radius: 10px;
+    border-right-width:0px;
+  	border-left-width:0px;
+    border-collapse: separate; 
+} 
 
 .vl {
   border-left: 2px solid;
@@ -140,6 +179,31 @@ footer{
 
 .mobile-footer-content{
     display:none !important;
+}
+
+/* Modal styles */
+
+.modal .modal-footer {
+	background: #ecf0f1;
+	border-radius: 0 0 3px 3px;
+}
+.modal .modal-title {
+    display: inline-block;
+}
+.modal .form-control {
+	border-radius: 2px;
+	box-shadow: none;
+	border-color: #dddddd;
+}
+.modal textarea.form-control {
+	resize: vertical;
+}
+.modal .btn {
+	border-radius: 2px;
+	min-width: 100px;
+}	
+.modal form label {
+	font-weight: normal;
 }
 
 

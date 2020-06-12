@@ -111,10 +111,11 @@
                             </div>
                         </div>
                         <div class="col-lg-8">
-                            <table class="table table-striped table-hover" id = "tabledata">
-                                <thead class="thead-dark">
+                            <table class="table table-hover table-responsive-md" id = "tabledata" style = "border-collapse: separate;border-spacing: 0 15px; background: #F6F5F8; ">
+                                <thead>
                                     <tr>
                                         <th scope="col"><input type="checkbox" id="checkallusers" onchange="checkAll(this)"></th>
+                                        <th></th>
                                         <th>EMPLOYEE</th>
                                         <th>SALARY</th>
                                         <th>STATUS</th>
@@ -123,15 +124,16 @@
                                 </thead>
                                 <tbody class="page-table">
                                   @foreach($employers as $employee)
-                                    <tr>
+                                    <tr style = "background: #FFFFFF;">
                                       <td scope="row"><input type="checkbox" name = "check" class="usersCheckbox" value=""></td>
+                                      <td><img src = "{{ asset('images/pic.png') }}" width="40"></td>
                                       <td>{{ $employee->user->first_name }} {{ $employee->user->last_name }} <p>{{ $employee->user->occupation }}</p></td>
                                       <td>{{ $employee->salary }}<p>{{ $employee->classification }}</p></td>
                                       <td>{{ $employee->status }}<p>{{ $employee->status_time }}</p></td>
                                       <td>
                                           <div class="manage">
                                               <a href="" data-toggle="modal" data-target="#editModalSubscription" onclick="editItem('{{ $employee->id }}','{{ $employee->user->first_name }}','{{ $employee->user->last_name }}','{{ $employee->user->email }}','{{ $employee->user->phone }}','{{ $employee->user->occupation }}','{{ $employee->salary }}','{{ $employee->status }}','{{ $employee->status_time }}','{{ $employee->classification }}')"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>
-                                              <a href="{{ route('employee.delete', $employee->id) }}"><i class="fa fa-trash fa-2x vl" aria-hidden="true"  ></i></a>
+                                              <a href="" data-toggle="modal" data-target="#deleteModalSubscription" onclick="deleteItem('{{ $employee->id }}')"><i class="fa fa-trash fa-2x vl" aria-hidden="true"  ></i></a>
                                           </div>
                                       </td>
                                     </tr>
@@ -334,6 +336,28 @@
   </div>
 </div>
 
+<!-- Delete Modal HTML -->
+  <div id="deleteModalSubscription" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form action = "" class = "deleteForm">
+          <div class="modal-header">            
+            <h4 class="modal-title">Delete Employee</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+          <div class="modal-body">          
+            <p>Are you sure you want to delete these Records?</p>
+            <p class="text-warning"><small>This action cannot be undone.</small></p>
+          </div>
+          <div class="modal-footer">
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+            <input type="submit" class="btn btn-danger" id = "deleteItems" value="Delete">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
 <footer>
     <div class="footer-content container d-flex justify-content-between">
         <div class="footer-icons">
@@ -409,10 +433,11 @@
             $('#tabledata').html("");
 
             let html = `
-            <table class="table table-striped table-hover" id = "tabledata">
-              <thead class="thead-dark">
+            <table class="table table-hover table-responsive-md" id = "tabledata" style = "border-collapse: separate;border-spacing: 0 15px; background: #F6F5F8; ">
+              <thead>
                   <tr>
                       <th scope="col"><input type="checkbox" id="checkallusers" onchange="checkAll(this)"></th>
+                      <th></th>
                       <th>EMPLOYEE</th>
                       <th>SALARY</th>
                       <th>STATUS</th>
@@ -427,8 +452,9 @@
 
               let delete_url= "{{ route('employee.delete', 'format_id_125') }}".replace('format_id_125',value.id);  
 
-              html += `<tr>
+              html += `<tr style = "background: #FFFFFF;">
                             <td scope="row"><input type="checkbox" name = "check" class="usersCheckbox" value=""></td>
+                            <td><img src = "{{ asset('images/pic.png') }}" width="40"></td>
                             <td>${value.user.first_name} ${value.user.last_name} <p>${value.user.occupation}</p></td>
                             <td>${value.salary }<p>${value.classification }</p></td>
                             <td>${value.status }<p>${value.status_time }</p></td>
@@ -445,6 +471,8 @@
                       </table>`;
 
             $('#tabledata').append(html);
+
+            
           }
           
         },
@@ -554,10 +582,11 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-            <table class="table table-striped table-hover" id = "tabledata">
-              <thead class="thead-dark">
+            <table class="table table-hover table-responsive-md" id = "tabledata" style = "border-collapse: separate;border-spacing: 0 15px; background: #F6F5F8; ">
+              <thead>
                   <tr>
                       <th scope="col"><input type="checkbox" id="checkallusers" onchange="checkAll(this)"></th>
+                      <th></th>
                       <th>EMPLOYEE</th>
                       <th>SALARY</th>
                       <th>STATUS</th>
@@ -572,8 +601,9 @@
 
               let delete_url= "{{ route('employee.delete', 'format_id_125') }}".replace('format_id_125',value.id);  
 
-              html += `<tr>
+              html += `<tr style = "background: #FFFFFF;">
                             <td scope="row"><input type="checkbox" name = "check" class="usersCheckbox" value=""></td>
+                            <td><img src = "{{ asset('images/pic.png') }}" width="40"></td>
                             <td>${value.user.first_name} ${value.user.last_name} <p>${value.user.occupation}</p></td>
                             <td>${value.salary }<p>${value.classification }</p></td>
                             <td>${value.status }<p>${value.status_time }</p></td>
@@ -649,6 +679,22 @@
 
       $("#sendItem").click(function(){
         $(".formSubmit").attr('action', url);
+      });
+   }
+
+   function deleteItem(id)
+   {
+       var id = id;
+
+       console.log(id);
+
+       var url = '{{ route("employee.delete", ":id") }}';
+       url = url.replace(':id', id);
+
+      //console.log(url);
+
+      $("#deleteItems").click(function(){
+        $(".deleteForm").attr('action', url);
       });
    }
 
