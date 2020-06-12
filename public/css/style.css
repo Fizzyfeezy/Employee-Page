@@ -21,6 +21,11 @@ body .bg img{
     text-shadow: 1px 1px 1px #ccc;
 }
 
+.nav-frame a.link-active{
+    border-bottom:3px solid #1FC4AB;
+    border-radius: 2px;
+}
+
 .avatar {
     vertical-align: middle;
     width:  30px;
