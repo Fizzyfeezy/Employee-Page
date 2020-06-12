@@ -49702,7 +49702,36 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  data: {
+    user: ''
+  },
+  methods: {
+    addMessage: function addMessage(message) {
+      var _this = this;
+
+      axios.post('/employee/nav', message).then(function (response) {
+        console.log(response); //this.message = '';
+
+        _this.user.push(response);
+
+        setTimeout(_this.scrollToEnd, 100); //console.log(response.data);
+      })["catch"](function (error) {
+        console.log(error);
+      });
+      axios.get('/employee/all').then(function (response) {
+        console.log(response);
+        _this.results = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+      message = '';
+    },
+    scrollToEnd: function scrollToEnd() {
+      window.scrollTo(0, 99999);
+    }
+  },
+  created: function created() {}
 });
 
 /***/ }),

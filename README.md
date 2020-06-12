@@ -47,6 +47,10 @@
 
 	(php artisan db:seed)
 
+12. Run Node package (package.json)
+
+	(npm run dev) or (npm run watch)
+
 
 ## Wrapping Up
 
