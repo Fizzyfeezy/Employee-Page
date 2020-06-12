@@ -24,10 +24,10 @@
                         <a class="navbar-brand bootstrap-img" href="#">
                             <img src="{{ asset('images/employees.png') }}" width="120" alt="" loading="lazy">
                         </a>
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse nav-frame" id="navbarSupportedContent">
+                        <div class="collapse navbar-collapse nav-frame" id="navbarToggleExternalContent">
                             <ul class="navbar-nav mr-auto">
                                 <li class="nav-item"><a class="nav-link" href = "" >Calendar</a></li>
                                 <li class="nav-item"><a class="nav-link" href = "" >Statistics</a></li>
