@@ -11,51 +11,51 @@
         <div class="col-lg-4">
             <div class="card side-emp">
                 <div class="card-body emp-list emp-active" value = "all">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/employ.png') }}" alt="employee" class="avatar">
                         <p class="card-title">All Employees</p>
                     </a>
                 </div>
                 <h3>PROJECT</h3>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/adobe.png') }}" alt="employee" class="avatar">
                         <p class="card-title">Arena Sport</p>
                     </a>
                 </div>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/dsv.png') }}" alt="employee" class="avatar">
                         <p class="card-title">DSV</p>
                     </a>
                 </div>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/sm.png') }}" alt="employee" class="avatar">
                         <p class="card-title">Seafood Mall</p>
                     </a>
                 </div>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/fs.png') }}" alt="employee" class="avatar">
                         <p class="card-title">FireStar</p>
                     </a>
                 </div>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/zeta.png') }}" alt="employee" class="avatar">
                         <p class="card-title">Zeta Bank</p>
                     </a>
                 </div>
                 <h3>STATUS</h3>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/ft.png') }}" alt="employee" class="avatar">
                         <p class="card-title">Full time</p>
                     </a>
                 </div>
                 <div class="card-body emp-list" value = "none">
-                    <a href="#">
+                    <a href="">
                         <img src="{{ asset('images/pt.png') }}" alt="employee" class="avatar">
                         <p class="card-title">Part time</p>
                     </a>
